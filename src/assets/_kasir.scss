@@ -1,0 +1,21 @@
+.Main_Page {
+  background: #ccc;
+
+  .Card_Barang {
+    border-style: solid;
+    border-width: medium;
+    padding: 5px;
+  }
+
+  .Title_Cart {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    
+    li {
+      padding: 10px;
+      width: 100%;
+    }
+  }
+}
