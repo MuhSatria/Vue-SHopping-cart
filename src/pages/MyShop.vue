@@ -27,7 +27,7 @@
           <ul class="col-md-12 cart-body"  v-for="content in contents" :key="content.id">
             <li class="col-md-6 list-cart">{{ content.title }}</li>
             <li class="col-md-3 list-cart">{{ 'Rp.'+' '+content.price }}</li>
-            <li class="col-md-3 list-cart"><button @click="removeFromCart(content.id)">remove</button></li>
+            <li class="col-md-3 list-cart"><button @click="removeFromCart(content)">remove</button></li>
           </ul>
         </div>
           <div class="total-bayar">
@@ -81,10 +81,16 @@ export default {
      console.log('asdasds', content)
     },
 
-    removeFromCart(content, i) {
-      // this.contents = this.contents.slice(0, i-1).concat(contents.slice(i.contents.length))
-      this.contents = this.contents.filter(content => content.id !== content.id)
+    removeFromCart(content) {
+      content.qty -= 1;
+
+      this.contents.splice(this.contents.indexOf(content), 1);
     }
+
+    // removeFromCart(content, i) {
+    //   // this.contents = this.contents.slice(0, i-1).concat(contents.slice(i.contents.length))
+    //   this.contents = this.contents.filter(content => content.id !== content.id)
+    // }
   }
 }
 </script>

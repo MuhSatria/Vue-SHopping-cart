@@ -2,22 +2,19 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <!-- <Kasir/> -->
-    <!-- <Belajar/> -->
     <MyShop/>
   </div>
 </template>
 
 <script>
 import Kasir from './pages/Kasir'
-import Belajar from './pages/Belanja'
 import MyShop from './pages/MyShop'
 
 export default {
   name: 'App',
   components: {
     Kasir,
-    Belajar,
-    MyShop
+    MyShop,
   }
 }
 </script>
